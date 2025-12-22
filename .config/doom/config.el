@@ -74,3 +74,12 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; LSP Headerline Breadcrumb のトグル設定
+(map! :leader
+      :desc "Toggle LSP headerline breadcrumb"
+      "l b" #'lsp-headerline-breadcrumb-mode)
+
+(map! :leader
+      :desc "Toggle Scroll Bar"
+      "l s" #'scroll-bar-mode)
