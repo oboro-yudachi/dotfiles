@@ -21,7 +21,7 @@
 - 対策: 「関数宣言の変更」「変数名の変更」「フィールド名の変更」
 
 *** コード例
-[[file:~/Documents/refactoring/01_mysterious_name_bad.js][MysteriousName]]
+[[file:~/Documents/refactoring/01_mysterious_name_bad.js][Mysterious Name]]
 
 ** 2. 重複したコード (Duplicated Code)
 *** 概要
