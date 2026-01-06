@@ -1,0 +1,5 @@
+* Inbox
+#+TITLE: 第3章「コードの不吉な臭い」: データクラス
+#+AUTHOR: Sho Taguchi
+#+STARTUP: showall indent
+
