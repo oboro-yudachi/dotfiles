@@ -21,7 +21,7 @@
 - 対策: 「関数宣言の変更」「変数名の変更」「フィールド名の変更」
 
 *** コード例
-[[file:~/Documents/refactoring/01_mysterious_name.js][MysteriousName]]
+[[file:~/Documents/refactoring/01_mysterious_name_bad.js][MysteriousName]]
 
 ** 2. 重複したコード (Duplicated Code)
 *** 概要
@@ -30,7 +30,7 @@
 - 対策: 「関数の抽出」で1箇所にまとめる
 
 *** コード例
-[[file:~/Documents/refactoring/02_duplicated_code.js][Duplicated Code]]
+[[file:~/Documents/refactoring/02_duplicated_code_bad.js][Duplicated Code]]
 
 ** 3. 長い関数 (Long Function)
 *** 概要
@@ -41,7 +41,7 @@
 - 対策: 「関数の抽出」が99%
 
 *** コード例
-[[file:~/Documents/refactoring/03_long_function.js][Long Function]]
+[[file:~/Documents/refactoring/03_long_function_bad.js][Long Function]]
 
 ** 4. 長いパラメータリスト (Long Parameter List)
 *** 概要
@@ -52,7 +52,7 @@
   - 「パラメータオブジェクトの導入」: 複数の引数を1つのオブジェクトにまとめる
 
 *** コード例
-[[file:~/Documents/refactoring/04_long_parameter_list.js][Long Parameter List]]
+[[file:~/Documents/refactoring/04_long_parameter_list_bad.js][Long Parameter List]]
 
 ** 5. グローバルなデータ (Global Data)
 *** 概要
@@ -62,7 +62,7 @@
 - 対策: 「変数のカプセル化」でアクセスを関数経由に限定する
 
 *** コード例
-[[file:~/Documents/refactoring/05_global_data.js][Global Data]]
+[[file:~/Documents/refactoring/05_global_data_bad.js][Global Data]]
 
 ** 6. 変更可能なデータ (Mutable Data)
 *** 概要
@@ -72,7 +72,7 @@
 - 対策: 「変数のカプセル化」「変数の分離」「問い合わせと更新の分離」など
 
 *** コード例
-[[file:~/Documents/refactoring/06_mutable_data.js][Mutable Data]]
+[[file:~/Documents/refactoring/06_mutable_data_bad.js][Mutable Data]]
 
 ** 7. 変更の偏り (Divergent Change)
 *** 概要
@@ -82,7 +82,7 @@
 - 対策：「フェーズの分離」「関数の移動」「クラスの抽出」でコンテキストを分ける
 
 *** コード例
-[[file:~/Documents/refactoring/07_divergent_change.js][Divergent Change]]
+[[file:~/Documents/refactoring/07_divergent_change_bad.js][Divergent Change]]
 
 ** 8. 変更の分散 (Shotgun Surgery)
 *** 概要
@@ -92,7 +92,7 @@
 - 対策：「関数の移動」「フィールドの移動」で1箇所に集める
 
 *** コード例
-[[file:~/Documents/refactoring/08_shotgun_surgery.js][Shotgun Surgery]]
+[[file:~/Documents/refactoring/08_shotgun_surgery_bad.js][Shotgun Surgery]]
 
 ** 9. 特性の横恋慕 (Feature Envy)
 *** 概要
@@ -101,7 +101,7 @@
 - 対策：その関数（またはその一部）を、データがある場所へ移動してあげる（「関数の移動」）
 
 *** コード例
-[[file:~/Documents/refactoring/09_feature_envy.js][Feature Envy]]
+[[file:~/Documents/refactoring/09_feature_envy_bad.js][Feature Envy]]
 
 ** 10. データの群れ (Data Clumps)
 *** 概要
@@ -110,7 +110,7 @@
 - 対策：「クラスの抽出」「パラメータオブジェクトの導入」で1つのオブジェクトにまとめる
 
 *** コード例
-[[file:~/Documents/refactoring/10_data_clumps.js][Data Clumps]]
+[[file:~/Documents/refactoring/10_data_clumps_bad.js][Data Clumps]]
 
 ** 11. 基本データ型への執着 (Primitive Obsession)
 *** 概要
@@ -119,7 +119,7 @@
 - 対策：「オブジェクトによるプリミティブの置き換え」で専用のクラスを作る
 
 *** コード例
-[[file:~/Documents/refactoring/11_primitive_obsession.js][Primitive Obsession]]
+[[file:~/Documents/refactoring/11_primitive_obsession_bad.js][Primitive Obsession]]
 
 ** 12. 重複したスイッチ文 (Repeated Switches)
 *** 概要
@@ -128,7 +128,7 @@
 - 対策：「ポリモーフィズムによる条件記述の置き換え」
 
 *** コード例
-[[file:~/Documents/refactoring/12_repeated_switches.js][Repeated Switches]]
+[[file:~/Documents/refactoring/12_repeated_switches_bad.js][Repeated Switches]]
 
 ** 13. ループ (Loops)
 *** 概要
@@ -137,7 +137,7 @@
 - 対策：「パイプラインによるループの置き換え」（filter, mapなど）
 
 *** コード例
-[[file:~/Documents/refactoring/13_loops.js][Loops]]
+[[file:~/Documents/refactoring/13_loops_bad.js][Loops]]
 
 ** 14. 怠け者の要素 (Lazy Element)
 *** 概要
@@ -147,7 +147,7 @@
 - 対策：「関数のインライン化」「クラスのインライン化」で削除する
 
 *** コード例
-[[file:~/Documents/refactoring/14_lazy_element.js][Lazy Element]]
+[[file:~/Documents/refactoring/14_lazy_element_bad.js][Lazy Element]]
 
 ** 15. 疑わしき一般化 (Speculative Generality)
 *** 概要
@@ -157,7 +157,7 @@
 - リファクタリング：「クラス階層の平坦化」「関数のインライン化」「関数宣言の変更」「デッドコードの削除」
 
 *** コード例
-[[file:~/Documents/refactoring/15_speculative_Generality.js][Speculative Generality]]
+[[file:~/Documents/refactoring/15_speculative_Generality_bad.js][Speculative Generality]]
 
 ** 16. 一時的属性 (Temporary Field)
 *** 概要
@@ -166,7 +166,7 @@
 - 対策：「クラスの抽出」でその変数が活躍する場所（クラス）を作ってあげる
 
 *** コード例
-[[file:~/Documents/refactoring/16_temporary_field.js][Temporary Field]]
+[[file:~/Documents/refactoring/16_temporary_field_bad.js][Temporary Field]]
 
 ** 17. メッセージの連鎖 (Message Chains)
 *** 概要
@@ -176,7 +176,7 @@
 - 対策：「委譲の隠蔽」でクライアントに関係性を隠す
 
 *** コード例
-[[file:~/Documents/refactoring/17_message_chains.js][Message Chains]]
+[[file:~/Documents/refactoring/17_message_chains_bad.js][Message Chains]]
 
 ** 18. 仲介人 (Middle Man)
 *** 概要
@@ -185,7 +185,7 @@
 - 対策：「仲介人の除去」で、実際に仕事をするオブジェクトを直接呼ぶように戻す
 
 *** コード例
-[[file:~/Documents/refactoring/18_middle_man.js][Middle Man]]
+[[file:~/Documents/refactoring/18_middle_man_bad.js][Middle Man]]
 
 ** 19. インサイダー取引 (Insider Trading)
 *** 概要
@@ -194,7 +194,7 @@
 - 対策：「関数の移動」「フィールドの移動」で、データをやり取りしなくて済むように整理する
 
 *** コード例
-[[file:~/Documents/refactoring/19_insider_trading.js][Insider Trading]]
+[[file:~/Documents/refactoring/19_insider_trading_bad.js][Insider Trading]]
 
 ** 20. 巨大なクラス (Large Class)
 *** 概要
@@ -204,7 +204,7 @@
 - 対策：「クラスの抽出」「スーパークラスの抽出」
 
 *** コード例
-[[file:~/Documents/refactoring/20_large_class.js][Large Class]]
+[[file:~/Documents/refactoring/20_large_class_bad.js][Large Class]]
 
 ** 21. クラスのインタフェース不一致 (Alternative Classes with Different Interfaces)
 *** 概要
@@ -213,7 +213,7 @@
 - 対策：「関数宣言の変更」でシグネチャを合わせる。必要なら「スーパークラスの抽出」
 
 *** コード例
-[[file:~/Documents/refactoring/21_alternative_classes_with_different_interfaces.js][Alternative Classes with Different Interfaces]]
+[[file:~/Documents/refactoring/21_alternative_classes_with_different_interfaces_bad.js][Alternative Classes with Different Interfaces]]
 
 ** 22. データクラス (Data Class)
 *** 概要
@@ -224,7 +224,7 @@
 - ※例外：不変なデータ構造（APIレスポンスの型定義など）としてはOK
 
 *** コード例
-[[file:~/Documents/refactoring/22_data_class.js][Data Class]]
+[[file:~/Documents/refactoring/22_data_class_bad.js][Data Class]]
 
 ** 23. 相続拒否 (Refused Bequest)
 *** 概要
@@ -234,7 +234,7 @@
 - 対策：「メソッドの押し下げ」で不要なものを兄弟クラスへ移す。または「委譲によるサブクラスの置き換え」
 
 *** コード例
-[[file:~/Documents/refactoring/23_refused_bequest.js][Refused Bequest]]
+[[file:~/Documents/refactoring/23_refused_bequest_bad.js][Refused Bequest]]
 
 ** 24. コメント (Comments)
 *** 概要
@@ -244,7 +244,7 @@
 - 対策：「関数の抽出」「関数宣言の変更」「アサーションの導入」
 
 *** コード例
-[[file:~/Documents/refactoring/24_comments.js][Comments]]
+[[file:~/Documents/refactoring/24_comments_bad.js][Comments]]
 
 ** 第3章 まとめ
 - 「不吉な臭い」は、リファクタリングを始める合図
