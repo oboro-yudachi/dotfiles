@@ -91,7 +91,7 @@
 (add-hook 'org-mode-hook 'org-indent-mode)
 ;; 画像のリンクを実際の画像として表示する
 (setq org-startup-with-inline-images t)
-org-modernの設定
+;; org-modernの設定
 (use-package! org-modern
   :hook (org-mode . org-modern-mode)
   :config
