@@ -84,6 +84,10 @@
       :desc "Toggle Scroll Bar"
       "l s" #'scroll-bar-mode)
 
+(map! :leader
+      :desc "Vertico project search"
+      "/" #'+vertico/project-search)
+
 (setq org-directory "~/dotfiles/org/")
 ;; *太字* や /斜体/ などの記号を隠して表示する
 (setq org-hide-emphasis-markers t)
