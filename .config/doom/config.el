@@ -88,7 +88,6 @@
       :desc "Vertico project search"
       "/" #'+vertico/project-search)
 
-(setq org-directory "~/org/")
 ;; *太字* や /斜体/ などの記号を隠して表示する
 (setq org-hide-emphasis-markers t)
 ;; 見出しの余計な「*」を消してインデントを整理する
