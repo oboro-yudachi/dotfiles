@@ -12,10 +12,6 @@ if [ -d "/opt/homebrew/opt/openssl@3/bin" ]; then
   export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
 # Doom Emacs
 if [ -f "$HOME/.config/emacs/bin/doom/" ]; then
   export PATH="$HOME/.local/bin:$PATH"
