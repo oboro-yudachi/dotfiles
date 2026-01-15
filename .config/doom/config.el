@@ -111,3 +111,19 @@
 ;; 確実を期すために
 ;; (add-hook 'after-change-major-mode-hook
 ;;           (lambda () (setq tab-width 2)))
+
+;; erbファイル用
+(with-eval-after-load 'flycheck
+  (add-hook 'mhtml-mode-hook
+            (lambda ()
+              ;; html-tidy というチェッカーだけ無効リストに追加
+              (setq-local flycheck-disabled-checkers '(html-tidy)))))
+
+(add-hook 'web-mode-hook
+  (lambda ()
+    (font-lock-add-keywords
+     nil
+     ;; < の直後に非ASCII文字（日本語など）が来る場合、
+     ;; そのブロック全体を 'default フェイス（通常色）で上書きする
+     '(("<\\([[:nonascii:]][^>]*\\)>" 0 'default t))
+     'append))) ;; 'append を指定して web-mode のハイライトより後に適用させる
