@@ -129,3 +129,16 @@
      'append))) ;; 'append を指定して web-mode のハイライトより後に適用させる
 
 (setq pangu-spacing-mode nil)
+
+;; treemacsの設定
+(after! treemacs
+  ;; 幅を固定ロックしない（手で調整可能にする）
+  (setq treemacs-width-is-initially-locked nil
+        treemacs-width 50) ; デフォルト幅
+
+  (defun my/treemacs-set-width (width)
+    "Treemacs の幅を WIDTH（列数）に設定する。"
+    (interactive "nTreemacs width: ")
+    (setq treemacs-width width)
+    (when-let ((win (treemacs-get-local-window)))
+      (adjust-window-trailing-edge win (- width (window-total-width win)) t))))
