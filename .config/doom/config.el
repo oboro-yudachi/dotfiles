@@ -143,6 +143,16 @@
     (when-let ((win (treemacs-get-local-window)))
       (adjust-window-trailing-edge win (- width (window-total-width win)) t))))
 
+;; まず「クラス」として設定を書く
+(dir-locals-set-class-variables
+ 'my-ruby-project
+ '((ruby-mode . ((lsp-enabled-clients . (my-ruby-lsp))))))
+
+;; そのクラスを特定ディレクトリに紐づける
+(dir-locals-set-directory-class
+ "Users/taguchishoh/Documents/github/rails-training-app" 'my-ruby-project)
+;; ↑ 末尾の / を忘れない & 実際のプロジェクトパスに差し替える
+
 (defun my-ruby-lsp-initialization-options ()
   "Return initialization options for ruby-lsp."
   '(:formatter "standard"
