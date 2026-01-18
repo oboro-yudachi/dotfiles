@@ -153,11 +153,6 @@
  "Users/taguchishoh/Documents/github/rails-training-app" 'my-ruby-project)
 ;; ↑ 末尾の / を忘れない & 実際のプロジェクトパスに差し替える
 
-(defun my-ruby-lsp-initialization-options ()
-  "Return initialization options for ruby-lsp."
-  '(:formatter "standard"
-    :linters ["standard"]))
-
 (use-package lsp-mode
   :init
   ;; rubocop-ls や標準の ruby-lsp-ls を無効にしておく
@@ -168,7 +163,6 @@
     :new-connection (lsp-stdio-connection "ruby-lsp")
     :major-modes '(ruby-mode ruby-ts-mode)
     :server-id 'my-ruby-lsp
-    :initialization-options #'my-ruby-lsp-initialization-options))
   ;; Ruby では常に自作クライアントだけを有効にする
   (add-hook 'ruby-mode-hook
             (lambda ()
