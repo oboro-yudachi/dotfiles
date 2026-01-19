@@ -75,19 +75,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; LSP Headerline Breadcrumb のトグル設定
-(map! :leader
-      :desc "Toggle LSP headerline breadcrumb"
-      "l b" #'lsp-headerline-breadcrumb-mode)
-
-(map! :leader
-      :desc "Toggle Scroll Bar"
-      "l s" #'scroll-bar-mode)
-
-(map! :leader
-      :desc "Vertico project search"
-      "/" #'+vertico/project-search)
-
+(after! doom-modeline
+  (setq doom-modeline-vcs-max-length 60))
 ;; *太字* や /斜体/ などの記号を隠して表示する
 (setq org-hide-emphasis-markers t)
 ;; 見出しの余計な「*」を消してインデントを整理する
@@ -168,3 +157,31 @@
             (lambda ()
               (setq-local lsp-enabled-clients '(my-ruby-lsp))
               (lsp-deferred))))
+
+;; LSP Headerline Breadcrumb のトグル設定
+(map! :leader
+      :desc "Toggle LSP headerline breadcrumb"
+      "l b" #'lsp-headerline-breadcrumb-mode)
+
+(map! :leader
+      :desc "Toggle Scroll Bar"
+      "l s" #'scroll-bar-mode)
+
+(map! :leader
+      :desc "Vertico project search"
+      "/" #'+vertico/project-search)
+
+;; 東城さんの設定
+;; おそらくそのまま適用しても、DoomEmacs用ではないので効果がなかったかも
+;; (use-package lsp-mode
+;;   :config
+;;   (setq lsp-inlay-hint-enable t)
+;;   (setq lsp-disabled-clients '(rubocop-ls))
+;;   (setq lsp-javascript-format-enable nil)
+;;   (setq lsp-typescript-format-enable nil)
+;;   :hook
+;;   ((ruby-mode . lsp)
+;;    (tsx-ts-mode . lsp)
+;;    (typescript-ts-mode . lsp)))
+
+;; (use-package lsp-ui)
