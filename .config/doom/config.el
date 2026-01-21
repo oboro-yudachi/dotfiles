@@ -75,6 +75,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 (after! doom-modeline
   (setq doom-modeline-vcs-max-length 60))
 ;; *太字* や /斜体/ などの記号を隠して表示する
